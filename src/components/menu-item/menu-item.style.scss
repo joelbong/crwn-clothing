@@ -22,14 +22,6 @@
         }
     }
 
-    &:first-child {
-        margin-right: 7.5px;
-    }
-
-    &:last-child {
-        margin-left: 7.5px;
-    }
-
     &.large {
         height: 380px;
     }
@@ -64,10 +56,5 @@
             font-weight: lighter;
             font-size: 16px;
         }
-    }
-
-    .subtitle {
-        font-weight: lighter;
-        font-size: 16px;
     }
 }
