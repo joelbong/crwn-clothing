@@ -43,7 +43,7 @@ class SignIn extends Component {
                 <span>Sign in with your email and account</span>
 
                 <form onSubmit={this.handleSubmit}>
-                    <FormInput 
+                    <FormInput
                         name='email' 
                         type='email'
                         value={this.state.email}
