@@ -1,10 +1,16 @@
+// Vendor modules
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import CustomButton from '../custom-button/custom-button.component'
-import CartItem from '../cart-item/cart-item.component'
+// Components
+import CustomButton from '../custom-button/custom-button.component';
+import CartItem from '../cart-item/cart-item.component';
 
-import './cart-dropdown.style.scss'
+// Redux - reselect
+import {selectCartItems} from '../../redux/cart/cart.selector'
+
+// Styles
+import './cart-dropdown.style.scss';
 
 const CartDropdown = ({cartItems}) => (
     <div className='cart-dropdown'>
@@ -17,8 +23,8 @@ const CartDropdown = ({cartItems}) => (
     </div>
 )
 
-const mapStateToProps = ({cart: {cartItems}}) => ({
-    cartItems
+const mapStateToProps = (state) => ({
+    cartItems: selectCartItems(state)
 })
 
 export default connect(mapStateToProps)(CartDropdown)
